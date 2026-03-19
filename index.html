@@ -5,144 +5,273 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Profile image centered in banner */
+			#banner .profile-photo {
+				display: block;
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin: 0 auto 1.5em auto;
+				border: 4px solid #f56a6a;
+				box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+			}
+			#banner .content {
+				text-align: center;
+			}
+			#banner .content header h1 {
+				font-size: 2.2em;
+			}
+			#banner .content .subtitle {
+				color: #f56a6a;
+				font-weight: 600;
+				margin-bottom: 1em;
+			}
+			#banner .content p {
+				text-align: left;
+				max-width: 600px;
+				margin: 0 auto 1.5em auto;
+			}
+			#banner .content .actions {
+				justify-content: center;
+			}
+			/* Skills grid */
+			.skills-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em;
+				padding: 0;
+				list-style: none;
+				margin: 0.5em 0 0 0;
+			}
+			.skills-grid li {
+				background: #f4f4f4;
+				border-left: 3px solid #f56a6a;
+				padding: 0.4em 0.9em;
+				border-radius: 3px;
+				font-size: 0.85em;
+				font-weight: 600;
+				color: #555;
+			}
+			/* Section divider */
+			.section-divider {
+				border: none;
+				border-top: 2px solid #f0f0f0;
+				margin: 2em 0;
+			}
+			/* Habilidades personales en sidebar */
+			#menu ul {
+				list-style: disc;
+				padding-left: 1.2em;
+			}
+			#menu ul li {
+				padding: 0.2em 0;
+				color: #7f888f;
+				font-size: 0.95em;
+			}
+			/* Article inner lists */
+			.article-list {
+				list-style: disc;
+				padding-left: 1.2em;
+				line-height: 2;
+			}
+			.article-list-tight {
+				list-style: disc;
+				padding-left: 1.2em;
+				line-height: 1.9;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div class="inner">
 
-							<!-- Header -->
-								<header id="header">
-								<a href="index.html" class="logo"><strong>Victor Hugo</strong> Rosado Koyoc</a>
-								<ul class="icons">
-									<li><a href="https://github.com/VictorHugoRok" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:victor_rosadok@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<!-- Search -->
+					<section id="search" class="alt">
+						<form method="post" action="#">
+							<input type="text" name="query" id="query" placeholder="Buscar..." />
+						</form>
+					</section>
 
-						<!-- Section 1: Presentación -->
-							<section id="banner">
-								<div class="content">
-									<header>
-										<h1>Victor Hugo Rosado Koyoc</h1>
-										<p class="subtitle">Estudiante de Ingeniería de Software | 21 años | Mérida, Yucatán, México</p>
-									</header>
-									<img src="images/profile.jpeg" alt="Victor Hugo Rosado Koyoc" style="width: 150px; height: 150px; border-radius: 50%; margin: 20px 0;">
-									<p>Soy estudiante de séptimo semestre de Licenciatura en Ingeniería de Software en la Universidad Autónoma de Yucatán (UADY). Comprometido con aplicar mis conocimientos en diseño limpio, pruebas unitarias y ciberseguridad. Me entusiasma la tecnología, el aprendizaje continuo y el trabajo administrativo con orientación a resultados.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/VictorHugoRok" class="button big">Ver mi GitHub</a></li>
-									</ul>
-								</div>
-							</section>
+					<!-- Menu -->
+					<nav id="menu">
+						<header class="major">
+							<h2>Navegación</h2>
+						</header>
+						<ul>
+							<li><a href="#banner">Inicio</a></li>
+							<li><a href="#habilidades">Habilidades</a></li>
+							<li><a href="#educacion">Educación</a></li>
+							<li><a href="#experiencia">Experiencia</a></li>
+							<li><a href="#contacto">Contacto</a></li>
+						</ul>
+					</nav>
 
-<!-- Section 2: Educación -->
-						<section>
-							<header class="major">
-								<h2>Educación</h2>
-							</header>
-							<div class="posts">
-								<article>
-									<h3>Licenciatura en Ingeniería de Software</h3>
-									<p><strong>Universidad:</strong> Universidad Autónoma de Yucatán (UADY)</p>
-									<p><strong>Semestre actual:</strong> Séptimo</p>
-									<p>Formación integral en ingeniería de software con énfasis en diseño limpio, pruebas unitarias, CRUD y ciberseguridad. Desarrollo de proyectos académicos aplicando principios de la ingeniería.</p>
-								</article>
-								<article>
-									<h3>Cursos y Certificaciones Relevantes</h3>
-									<ul>
-										<li><strong>IA segura: diálogos globales, soluciones desde México</strong> - UADY</li>
-										<li><strong>Endpoint Security de Cisco</strong></li>
-										<li><strong>Networking Academy Learn-A-Thon 2023</strong> - Cisco</li>
-										<li><strong>Introduction to Cybersecurity</strong> - Cisco</li>
-									</ul>
-								</article>
-							</div>
-						</section>
+					<!-- Habilidades Personales -->
+					<section id="habilidades">
+						<header class="major">
+							<h2>Habilidades Personales</h2>
+						</header>
+						<ul>
+							<li>Organizado</li>
+							<li>Pensamiento lógico</li>
+							<li>Proactivo</li>
+							<li>Responsable</li>
+							<li>Comunicación efectiva</li>
+							<li>Adaptabilidad</li>
+							<li>Trabajo en equipo</li>
+						</ul>
+					</section>
 
-<!-- Section 3: Experiencia -->
-						<section>
-							<header class="major">
-								<h2>Experiencia</h2>
-							</header>
-							<div class="posts">
-								<article>
-									<h3>Auxiliar de TI - Grupo Ponce</h3>
-									<p><strong>Período:</strong> Septiembre 2025 - Actualmente</p>
-									<p><strong>Sector:</strong> Seguros y fianzas</p>
-									<p><strong>Responsabilidades:</strong></p>
-									<ul>
-										<li>Soporte técnico a equipos de cómputo</li>
-										<li>Desarrollo de programas en Python y AppScript</li>
-										<li>Configuración de equipos nuevos</li>
-										<li>Creación de macros en Excel con VBA</li>
-										<li>Organización de datos</li>
-										<li>Colaboración en transmisiones en vivo</li>
-									</ul>
-								</article>
-							</div>
-						</section>
+					<!-- Idiomas -->
+					<section>
+						<header class="major">
+							<h2>Idiomas</h2>
+						</header>
+						<ul class="contact">
+							<li class="icon solid fa-language"><strong>Español:</strong> Nativo</li>
+							<li class="icon solid fa-language"><strong>Inglés:</strong> Básico</li>
+						</ul>
+					</section>
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
+					<!-- Contacto -->
+					<section id="contacto">
+						<header class="major">
+							<h2>Contacto</h2>
+						</header>
+						<p>¡Contáctame! Siempre estoy interesado en nuevas oportunidades y proyectos desafiantes.</p>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:victor_rosadok@outlook.com">victor_rosadok@outlook.com</a></li>
+							<li class="icon solid fa-phone">+52 (983) 115-3809</li>
+							<li class="icon solid fa-home">Calle 43a #379 entre 56 y 58<br />
+							Fco. de Montejo, Mérida, Yucatán</li>
+						</ul>
+					</section>
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-											<h2>Habilidades personales</h2>
-										</header>
-										<ul>
-											<li>Organizado</li>
-											<li>Pensamiento lógico</li>
-											<li>Proactivo</li>
-											<li>Responsable</li>
-											<li>Comunicación efectiva</li>
-											<li>Adaptabilidad</li>
-											<li>Trabajo en equipo</li>
-<!-- Section - Idiomas -->
-										<section>
-											<header class="major">
-												<h2>Idiomas</h2>
-											</header>
-											<ul style="list-style: none;">
-												<li><strong>Español:</strong> Nativo</li>
-												<li><strong>Inglés:</strong> Básico</li>
-									</ul>
-								</section>
+					<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Victor Hugo Rosado Koyoc.<br />
+						Diseño: <a href="https://html5up.net">HTML5 UP</a></p>
+					</footer>
 
-<!-- Section - Contacto -->
-										<section>
-											<header class="major">
-												<h2>Contacto</h2>
-											</header>
-											<p>¡Contáctame! Siempre estoy interesado en nuevas oportunidades y proyectos desafiantes.</p>
-											<ul class="contact">
-												<li class="icon solid fa-envelope"><a href="mailto:victor_rosadok@outlook.com">victor_rosadok@outlook.com</a></li>
-												<li class="icon solid fa-phone">+52 (983) 115-3809</li>
-												<li class="icon solid fa-home">Calle 43a #379 entre 56 y 58<br />
-												Fco. de Montejo, Mérida, Yucatán</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-												<p class="copyright">&copy; Victor Hugo Rosado Koyoc. Diseño basado en Editorial de <a href="https://html5up.net">HTML5 UP</a>.</p>
-						</div>
-					</div>
-
+				</div>
 			</div>
 
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Victor Hugo</strong> Rosado Koyoc</a>
+						<ul class="icons">
+							<li><a href="https://github.com/VictorHugoRok" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:victor_rosadok@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</header>
+
+					<!-- Banner: Presentación -->
+					<section id="banner">
+						<div class="content">
+							<img src="images/profile.jpeg" alt="Victor Hugo Rosado Koyoc" class="profile-photo" />
+							<header>
+								<h1>Victor Hugo Rosado Koyoc</h1>
+								<p class="subtitle">Estudiante de Ingeniería de Software &nbsp;|&nbsp; 21 años &nbsp;|&nbsp; Mérida, Yucatán, México</p>
+							</header>
+							<p>Soy estudiante de séptimo semestre de Licenciatura en Ingeniería de Software en la Universidad Autónoma de Yucatán (UADY). Comprometido con aplicar mis conocimientos en diseño limpio, pruebas unitarias y ciberseguridad. Me entusiasma la tecnología, el aprendizaje continuo y el trabajo administrativo con orientación a resultados.</p>
+							<ul class="actions">
+								<li><a href="https://github.com/VictorHugoRok" class="button primary big">Ver mi GitHub</a></li>
+								<li><a href="mailto:victor_rosadok@outlook.com" class="button big">Contactar</a></li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Habilidades Técnicas -->
+					<section>
+						<header class="major">
+							<h2>Habilidades Técnicas</h2>
+						</header>
+						<ul class="skills-grid">
+							<li>Python</li>
+							<li>JavaScript</li>
+							<li>AppScript</li>
+							<li>VBA / Excel</li>
+							<li>HTML &amp; CSS</li>
+							<li>CRUD</li>
+							<li>Pruebas Unitarias</li>
+							<li>Diseño Limpio</li>
+							<li>Ciberseguridad</li>
+							<li>Soporte Técnico</li>
+							<li>Git</li>
+						</ul>
+					</section>
+
+					<hr class="section-divider" />
+
+					<!-- Educación -->
+					<section id="educacion">
+						<header class="major">
+							<h2>Educación</h2>
+						</header>
+						<div class="posts">
+							<article>
+								<h3>Licenciatura en Ingeniería de Software</h3>
+								<p><strong>Universidad:</strong> Universidad Autónoma de Yucatán (UADY)</p>
+								<p><strong>Semestre actual:</strong> Séptimo semestre</p>
+								<p>Formación integral en ingeniería de software con énfasis en diseño limpio, pruebas unitarias, CRUD y ciberseguridad. Desarrollo de proyectos académicos aplicando principios de la ingeniería.</p>
+							</article>
+							<article>
+								<h3>Cursos y Certificaciones</h3>
+								<ul class="article-list">
+									<li><strong>IA Segura: Diálogos Globales, Soluciones desde México</strong> — UADY</li>
+									<li><strong>Endpoint Security</strong> — Cisco</li>
+									<li><strong>Networking Academy Learn-A-Thon 2023</strong> — Cisco</li>
+									<li><strong>Introduction to Cybersecurity</strong> — Cisco</li>
+								</ul>
+							</article>
+						</div>
+					</section>
+
+					<hr class="section-divider" />
+
+					<!-- Experiencia -->
+					<section id="experiencia">
+						<header class="major">
+							<h2>Experiencia Profesional</h2>
+						</header>
+						<div class="posts">
+							<article>
+								<h3>Auxiliar de TI — Grupo Ponce</h3>
+								<p><strong>Período:</strong> Septiembre 2025 — Actualmente &nbsp;&nbsp;<strong>Sector:</strong> Seguros y Fianzas</p>
+								<ul class="article-list-tight">
+									<li>Soporte técnico a equipos de cómputo</li>
+									<li>Desarrollo de programas en Python y AppScript</li>
+									<li>Configuración de equipos nuevos</li>
+									<li>Creación de macros en Excel con VBA</li>
+									<li>Organización y gestión de datos</li>
+									<li>Colaboración en transmisiones en vivo</li>
+								</ul>
+							</article>
+						</div>
+					</section>
+
+				</div>
+			</div>
+
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
